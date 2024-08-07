@@ -1,10 +1,10 @@
-
+Uygulamada Entitiyframework code first kullanılmıştır öncelikle db ve tabloların oluşturulması için migration yapılmasını rica ederim.
 Projede 3 tane endpoint bulunmaktadır.
 1)PostCompanyAsync: Eklenecek firma bilgilerini alır ve öncelikle validasyon kontrolü yapılır sonrasında telefon numarasına ait kayıt olup olmadığı kontrolü sağlanıp Companies tablosuna eklenir.
 2)PostJobAsync: Eklenecek ilan bilgilerini validasyon kontrolünden geçirerek ve koşulların uyması dahilinde Jobs tablosuna kaydeder.
 Sonrasında gelen job verisini Elasticsearch'de indexler.
 3)SearchJobsAsync:Belirtilen ilan yayınlanma süresi aralığındaki iş ilanlarını Elasticsearch üzerinde arar ve döndürür.
-Kullanılan teknolojiler:
+
 - .NET 8.0
 - MSSQL
 - StackExchange.Redis kütüphanesi
@@ -15,6 +15,7 @@ Kullanılan teknolojiler:
 - Entityframework code first
 - Unit of work design pattern
 - Unit test
+- N katmanlı mimari
 
 Test Senaryoları:
 - Şirket ekleme testi
