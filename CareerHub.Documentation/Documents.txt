@@ -1,0 +1,23 @@
+
+Projede 3 tane endpoint bulunmaktadır.
+1)PostCompanyAsync: Eklenecek firma bilgilerini alır ve öncelikle validasyon kontrolü yapılır sonrasında telefon numarasına ait kayıt olup olmadığı kontrolü sağlanıp Companies tablosuna eklenir.
+2)PostJobAsync: Eklenecek ilan bilgilerini validasyon kontrolünden geçirerek ve koşulların uyması dahilinde Jobs tablosuna kaydeder.
+Sonrasında gelen job verisini Elasticsearch'de indexler.
+3)SearchJobsAsync:Belirtilen ilan yayınlanma süresi aralığındaki iş ilanlarını Elasticsearch üzerinde arar ve döndürür.
+Kullanılan teknolojiler:
+- .NET 8.0
+- MSSQL
+- StackExchange.Redis kütüphanesi
+- Elasticsearch.Net kütüphanesi
+- NEST
+- Automapper
+- DI
+- Entityframework code first
+- Unit of work design pattern
+- Unit test
+
+Test Senaryoları:
+- Şirket ekleme testi
+- İş ilanı ekleme testi
+- İş ilanı arama testi
+- Hatalı giriş senaryoları
